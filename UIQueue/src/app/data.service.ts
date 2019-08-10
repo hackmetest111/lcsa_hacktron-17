@@ -12,4 +12,20 @@ export class DataService {
     console.log('http://localhost:8181/queue/api/getmessagequeue/getAllQueue');
     return this.http.get('http://localhost:8181/queue/api/getmessagequeue/getAllQueue');
   }
+
+pushMessage(){
+  console.log('http://localhost:8181/queue/api/getmessagequeue/getAllQueue');
+    return this.http.get('http://localhost:8181/queue/api/getmessagequeue/getAllQueue');
+  }
+
+
+
+popMessage(){
+  console.log('http://localhost:8181/queue/api/getmessagequeue/getAllQueue');
+  return this.http.get('http://localhost:8181/queue/api/getmessagequeue/getAllQueue');
+}
+
+
+
+
 }

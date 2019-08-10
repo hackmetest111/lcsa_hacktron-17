@@ -24,13 +24,22 @@ queueDetails;
   }
 
 pushMessage(){
-  console.log('push Message');
-
+ 
+  this.data.pushMessage().subscribe(data => {
+    console.log(data);
+    this.queueDetails = data;
+  }
+  
+    );
 }
 
 popMessage(){
-  console.log('popMessage');
-
+  this.data.popMessage().subscribe(data => {
+    console.log(data);
+    this.queueDetails = data;
+  }
+  
+    );
 }
 
 

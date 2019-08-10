@@ -1,21 +1,28 @@
 <h1>Queue Details</h1>
 
+
+
+
+
 <ul *ngIf="queueDetails">
     
   <li *ngFor="let queue of queueDetails">
- 
-    <div style="float:left;">
-        {{ queue.name }} 
- </div>
-     
+      <div style="text-align: left; width:400px;">
+            {{ queue.name }} 
+            
+            <!--<div style="width:100px;">-->
+                   <div style="margin-left:40px; ">  {{ queue.msgList }} </div> 
+            <!--</div>-->
+      </div>
 
-    <!--<button (click)="pushMessage()">Push Message</button> -->
-<div style="float:right">
-        <input  (click)="pushMessage()"  type="submit" value="Push Message" class="cta">
-        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        <input  (click)="popMessage()"  type="submit" value="Pop Message" class="cta">
-    
-</div>
+     
+      <div style="text-align: right;"> 
+            <input  (click)="pushMessage()"  type="submit" value="Push Message" class="cta">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input  (click)="popMessage()"  type="submit" value="Pop Message" class="cta"> 
+      </div>
+ 
+
     
     
   </li>

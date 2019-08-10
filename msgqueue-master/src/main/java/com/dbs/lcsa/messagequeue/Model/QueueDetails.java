@@ -1,9 +1,9 @@
 package com.dbs.lcsa.messagequeue.Model;
 
-
-
+import java.util.List;
 
 public class QueueDetails {
+	
     public int getId() {
         return id;
     }
@@ -22,9 +22,19 @@ public class QueueDetails {
 
     private int id;
     private String name;
+    public List<String> getMsgList() {
+		return msgList;
+	}
 
-    public QueueDetails(int id, String name) {
+	public void setMsgList(List<String> msgList) {
+		this.msgList = msgList;
+	}
+
+	private List<String> msgList;
+
+    public QueueDetails(int id, String name, List<String> msgList ) {
         this.id = id;
         this.name = name;
+        this.msgList=msgList;
     }
 }
