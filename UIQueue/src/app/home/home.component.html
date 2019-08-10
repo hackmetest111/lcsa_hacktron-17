@@ -1,11 +1,22 @@
-<p>home works!</p>
-
 <h1>Queue Details</h1>
 
 <ul *ngIf="queueDetails">
-    {{queueDetails}}
-  <li *ngFor="let user of queueDetails.data">
-    <img [src]="user.avatar">
-    <p>{{ user.first_name }} {{ user.last_name }}</p>
+    
+  <li *ngFor="let queue of queueDetails">
+ 
+    <div style="float:left;">
+        {{ queue.name }} 
+ </div>
+     
+
+    <!--<button (click)="pushMessage()">Push Message</button> -->
+<div style="float:right">
+        <input  (click)="pushMessage()"  type="submit" value="Push Message" class="cta">
+        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        <input  (click)="popMessage()"  type="submit" value="Pop Message" class="cta">
+    
+</div>
+    
+    
   </li>
 </ul>

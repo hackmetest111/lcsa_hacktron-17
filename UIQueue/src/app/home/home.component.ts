@@ -23,4 +23,15 @@ queueDetails;
       );
   }
 
+pushMessage(){
+  console.log('push Message');
+
+}
+
+popMessage(){
+  console.log('popMessage');
+
+}
+
+
 }

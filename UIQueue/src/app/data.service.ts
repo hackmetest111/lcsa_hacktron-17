@@ -9,7 +9,7 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getAllQueueDetails(){
-    console.log('https://reqres.in/api/users');
-    return this.http.get('https://reqres.in/api/users');
+    console.log('http://localhost:8181/queue/api/getmessagequeue/getAllQueue');
+    return this.http.get('http://localhost:8181/queue/api/getmessagequeue/getAllQueue');
   }
 }
