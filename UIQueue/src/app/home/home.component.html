@@ -1,1 +1,11 @@
 <p>home works!</p>
+
+<h1>Queue Details</h1>
+
+<ul *ngIf="queueDetails">
+    {{queueDetails}}
+  <li *ngFor="let user of queueDetails.data">
+    <img [src]="user.avatar">
+    <p>{{ user.first_name }} {{ user.last_name }}</p>
+  </li>
+</ul>

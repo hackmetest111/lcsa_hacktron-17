@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+queueDetails;
+
+
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.data.getAllQueueDetails().subscribe(data => {
+      console.log(data);
+      this.queueDetails = data;
+    }
+    
+      );
   }
 
 }
